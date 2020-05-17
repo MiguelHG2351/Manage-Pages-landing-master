@@ -33,6 +33,10 @@
       margin: 0;
   }
 
+  .d-flex {
+      display: flex !important;
+  }
+
 body {
     background-image: url(../images/bg-simplify-section-mobile.svg);
     /* background-size: 250px; */
@@ -41,6 +45,21 @@ body {
     /* background-color: #222222; */
     background-repeat: no-repeat, repeat-y;
     font-size: 16px;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 9;
+}
+
+.overlay.active {
+    display: block;
 }
 
 
@@ -57,7 +76,28 @@ body {
     }
 
     .list-nav {
+        background: #fff;
+        height: 45%;
+        margin: 0 6%;
+        padding: 0;
         display: none;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 20%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        list-style: none;
+        z-index: 10;
+        overflow: hidden;
+        /* overflow-y: auto; */
+    }
+    
+    .list-nav li {
+        background-color: #fff;
+        padding: 20px;
+        font-weight: bold;
     }
 
     .start {
@@ -296,9 +336,48 @@ body {
     
 }
 
-@media screen and (min-width: 992px) {
-    body {
-        background-color: var(--green-special);
+@media screen and (min-width: 740px) {
+    
+    .logo-header img {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .header-site {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 30px 50px;
+        align-items: center;
     }
 
+    .logo-header img {
+        width: 70%;
+    }
+
+    #btn-menu {
+        display: none;
+    }
+
+    .start {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .list-nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        justify-content: space-evenly;
+        font-size: 12px;
+        overflow: visible;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo-header img {
+        width: 45%;
+    }
 }
