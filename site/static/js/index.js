@@ -2,10 +2,22 @@
 
 const slider = document.getElementById("slider");
 const $btn = document.getElementsByClassName("btn");
+const menu = document.getElementById('btn-menu');
+const sidenav = document.getElementById('list-nav');
+const $overlay = document.querySelector('.overlay')
 const $image = document.getElementById("slider-image");
 const $user = document.getElementById("slider-user");
 const $description = document.getElementById("slider-description");
 let timer = 4000
+
+
+menu.addEventListener('click', () => {
+  sidenav.classList.toggle('d-flex')
+  menu.children[0].src = 'static/images/icon-close.svg'
+  $overlay.classList.toggle('active')
+})
+
+$overlay.addEventListener('click', () => { sidenav.classList.remove('d-flex'); $overlay.classList.remove('active'); menu.children[0].src = 'static/images/icon-hamburger.svg'})
 
 for (const key in $btn) {
     if(key <=3) {
@@ -21,7 +33,7 @@ for (const key in $btn) {
 }
 
 async function getData() {
-  const data = await fetch("api.json");
+  const data = await fetch("static/js/api.json");
   const response = await data.json();
   return response;
 }
