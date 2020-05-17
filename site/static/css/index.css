@@ -1,0 +1,304 @@
+:root {
+    --primary: #6200ee;
+    --bright-red: hsl(12, 88%, 59%);
+    --primary-variant: #3700b3;
+    --primary-blue: #6f42c1;
+    --secondary: #03dac6;
+    --color: #000;
+    --white-fixed: #fff;
+    --secondary-variant: #018786;
+    --background: #f0f2f5;
+    --error: #b00020;
+    --on-background: #1d2029;
+    --background-logo: #fff;
+    --background-btn: #3d5afe;
+    --height-header: calc(120px / 2);
+    --width-header: 120px;
+    --blue-facebook: rgb(45, 136, 255);
+    --oscuro: #18191a;
+    --gray: #95959f;
+    --block-oscuro: #242526;
+    --color-text: #151e3a;
+    --green-special: #31ce58;
+    --yellow: #dcff17;
+    --day: #ffff00;
+    --width-btn-mode: 80px;
+    --width-btn-rueda: 80px;
+    --background-input: #e4edf4;
+    --height-btn-mode: 40px;
+    --hover-sidenav: #e1dbd3;
+  }
+
+  * {
+      margin: 0;
+  }
+
+body {
+    background-image: url(../images/bg-simplify-section-mobile.svg);
+    /* background-size: 250px; */
+    font-family: "Be Vietnam";
+    background-position: center;
+    /* background-color: #222222; */
+    background-repeat: no-repeat, repeat-y;
+    font-size: 16px;
+}
+
+
+@media screen and (min-width: 375px) {
+    .header-site {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 45px 16px;
+        margin-bottom: 8px;
+    }
+
+    .header-site .logo-header img {
+        width: 66%;
+    }
+
+    .list-nav {
+        display: none;
+    }
+
+    .start {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn-menu {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .graphics {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .graphics img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .description, .about{
+        padding: 26px;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+
+    .description p, .about p, .card p {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--gray);
+        margin-top: 15px;
+    }
+
+    .btn-primary {
+        background-color: hsl(12, 88%, 59%);
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        padding: 1em 3.4em;
+        margin: 14px 0 20px 0;
+        color: #fff;
+        -webkit-box-shadow: 9px 18px 23px -11px rgba(241,97,62,1);
+        -moz-box-shadow: 9px 18px 23px -11px rgba(241,97,62,1);
+        box-shadow: 9px 18px 23px -11px rgba(241,97,62,1);
+        cursor: pointer
+    }
+
+    .btn-secondary {
+        background-color: #fff;
+        color: var(--bright-red);
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        padding: 1em 3.4em;
+        margin: 14px 0 20px 0;
+        font-weight: 600;
+        font-family: "Be Vietnam";
+        -webkit-box-shadow: -2px 18px 5px -10px rgba(201,100,80,1);
+        -moz-box-shadow: -2px 18px 5px -10px rgba(201,100,80,1);
+        box-shadow: -2px 18px 5px -10px rgba(201,100,80,1);
+    }
+
+    .header-card {
+        display: flex;
+        align-items: center;
+        background-color: #fff0eb;
+        /* justify-content:flex-start; */
+        margin-left: 15px;
+        box-sizing: border-box;
+    }
+
+    .header-card  span {
+        padding: .5rem 1.5rem;
+        color: #fff;
+        background-color: var(--bright-red);
+        border-radius: 20px;
+        margin-right: 12px;
+        border-top-left-radius: 20px;
+    }
+
+    .card p {
+        padding: 26px;
+        text-align: initial;
+    }
+
+    .testimonial center {
+        margin-bottom: 125px;
+    }
+
+    .card-testimonial {
+        background-color: #fafafa;
+        margin:40px 14px 20px 14px;
+        text-align: center;
+        position: relative;
+    }
+
+    .card-image {
+        position: relative;
+        top: -36px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-image figure img {
+        width: 60%;
+        height: auto;
+    }
+
+    .card-description p {
+        color: var(--gray);
+    }
+
+    .options {
+        display: flex;
+        justify-content: center;
+    }
+
+    .options button {
+        border: 1px solid var(--bright-red);
+        border-radius: 12px;
+        outline: none;
+        padding: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 2px;
+    }
+
+    .options button.active {
+        background-color: hsl(12, 88%, 59%);
+    }
+
+    .end {
+        background-color: var(--bright-red);
+        color: #fff;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 15px;
+        text-align: center;
+    }
+    
+    .end h1 {
+        font-size: 40px;
+    }
+
+    .footer {
+        background-color: #1e1e26;
+    }
+
+    .register {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 3rem 1rem;
+    }
+
+    .register input {
+        padding: 1em 3.8em;
+        /* font-size: 14px; */
+        border-radius: 22px;
+        outline: 0;
+        margin: .3em;
+        border: none;
+        text-align: left;
+    }
+    
+    .register button {
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        outline: 0;
+        border-radius: 22px;
+        padding: 0.8em 2.45em;
+        color: #fff;
+        background-color: var(--bright-red);
+    }
+
+    .list-footer {
+        margin: 1em 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 8px 84px;
+        font-size: 14px;
+    }
+    
+    .list-footer li a {
+        color: #e1e2e7;
+        text-decoration: none;
+    }
+
+    .social-media {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .social-media a img {
+        width: 160%;
+        height: auto    
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .copyright {
+        text-align: center;
+        color: var(--gray);
+        font-size: 14px;
+        padding: 25px 0;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-color: var(--green-special);
+    }
+
+}

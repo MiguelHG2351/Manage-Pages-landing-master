@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/index,css" />
+  <link rel="icon" sizes="32x32" href="static/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Manage landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header class="header-site">
+    <div class="logo-header">
+      <img src="static/images/logo.svg" alt="Logo del sitio en el header" />
+    </div>
+      <ul class="list-nav">
+        <li>Pricing</li>
+        <li>Product</li>
+        <li>About US</li>
+        <li>Carrers</li>
+        <li>Community</li>
+      </ul>
+      <div class="start"><button>Get Started</button></div>
+      <div class="menu"><button class="btn-menu"><img src="static/images/icon-hamburger.svg" alt="Menu"></button></div>
+  </header>
+
+  <section class="info">
+    <article>
+      <header class="graphics">
+        <img src="static/images/illustration-intro.svg" alt="Primer gráfico">
+      </header>
+      <div class="description">
+        <h1>Bring everyone together to build better products.</h1>
+        <p>Manage makes it simple for software teams to plan day-to-day task while keeping the large team goals in view</p>
+        <button class="btn-primary">Get Started</button>
+      </div>
+    </article>
+    <article class="about">
+      <h1>What's different about Manage?</h1>
+      <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
+    </article>
+    <article class="description-card">
+      <div class="card">
+        <div class="header-card">
+          <span>01</span>
+          <h4>Track company-wide progress</h4>
+        </div>
+        <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture againg.</p>
+      </div>
+      <div class="card">
+        <div class="header-card">
+          <span>02</span>
+          <h4>Advance buildt-in reports</h4>
+        </div>
+        <p>Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the report you need to keep key stakeholders informed.</p>
+      </div>
+      <div class="card">
+        <div class="header-card">
+          <span>03</span>
+          <h4>Everything you need in one place</h4>
+        </div>
+        <p>Stop jumping from one service to another to communicate, store, files, track tasks and share communicate. Manage offers an all-in-one team productivity solution.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="testimonial">
+    <center><h2>What they've said</h2></center>
+    <div class="testimonial-slider">
+      <div class="card-testimonial" id="slider">
+        <div class="card-image">
+          <figure>
+            <img src="" id="slider-image" alt="Testimonio de los que utilizarón el servicio" />
+            <p id="slider-user"></p>
+          </figure>
+        </div>
+        <div class="card-description">
+            <p id="slider-description"></p>
+        </div>
+      </div>
+      <div class="options" id="option">
+        <button class="btn active"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+    </div>
+    <center><button class="btn-primary">Get Started</button></center>
+  </section>
+
+  <section class="end">
+    <h1>Simplify how your teams works today</h1>
+    <button class="btn-secondary">Get Started</button>
+  </section>
+
+  <footer class="footer">
+    <form class="register" id="form">
+      <input placeholder="Updates in your inbox" type="email" name="email" />
+      <button type="submit">Go</button>
+    </form>
+    <ul class="list-footer">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About US</a></li>
+      <li><a href="#">Carrers</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <div class="social-media">
+      <a href="https://facebook.com" target="__blank"><img src="static/images/icon-facebook.svg" alt=""></a>
+      <a href="#" target="__blank"><img src="static/images/icon-youtube.svg" alt="Icono de facebook"></a>
+      <a href="#" target="__blank"><img src="static/images/icon-twitter.svg" alt="icono de youtube"></a>
+      <a href="#" target="__blank"><img src="static/images/icon-pinterest.svg" alt="Icono de pinterest"></a>
+      <a href="#" target="__blank"><img src="static/images/icon-instagram.sv" alt="Icono de instagram"></a>
+    </div>
+    <div class="footer-logo">
+      <img src="static/images/logo-white.svg" alt="Logo del sitio">
+    </div>
+    <div class="copyright">
+      <p>Copyright 2020. All Rights Reserved</p>
+    </div>
+  </footer>
+
+<script src="static/js/index.js"></script>
+</body>
+</html>
