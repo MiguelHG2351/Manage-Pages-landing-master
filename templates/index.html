@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
-  <link rel="icon" sizes="32x32" href="{{url_for('static', filename='../images/favicon-32x32.png')}}">
+  <link rel="icon" sizes="32x32" href="{{url_for('static', filename='images/favicon-32x32.png')}}">
   
   <title>Frontend Mentor | Manage landing page</title>
 
@@ -21,15 +21,15 @@
     <div class="logo-header">
       <img src="{{url_for('static', filename='images/logo.svg')}}" alt="" />
     </div>
-      <ul class="list-nav">
+      <ul class="list-nav" id="list-nav">
         <li>Pricing</li>
         <li>Product</li>
-        <li>About US</li>
+        <li>About Us</li>
         <li>Carrers</li>
         <li>Community</li>
       </ul>
-      <div class="start"><button>Get Started</button></div>
-      <div class="menu"><button class="btn-menu"><img src="{{url_for('static', filename='images/icon-hamburger.svg')}}" alt="Menu"></button></div>
+      <div class="start"><button class="btn-primary">Get Started</button></div>
+      <div class="menu"><button class="btn-menu" id="btn-menu"><img src="{{url_for('static', filename='images/icon-hamburger.svg')}}" alt="Menu"></button></div>
   </header>
 
   <section class="info">
@@ -129,6 +129,8 @@
       <p>Copyright 2020. All Rights Reserved</p>
     </div>
   </footer>
+
+  <div class="overlay" id="overlay"></div>
 
 <script src="{{url_for('static', filename='js/index.js')}}"></script>
 </body>
