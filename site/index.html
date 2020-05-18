@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
-  <link rel="icon" sizes="32x32" href="{{url_for('static', filename='images/favicon-32x32.png')}}">
+  <link rel="stylesheet" href="static/css/index.css" />
+  <link rel="icon" sizes="32x32" href="static/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Manage landing page</title>
 
@@ -19,23 +19,23 @@
 
   <header class="header-site">
     <div class="logo-header">
-      <img src="{{url_for('static', filename='images/logo.svg')}}" alt="" />
+      <img src="static/images/logo.svg" alt="Logo del sitio en el header" />
     </div>
-      <ul class="list-nav" id="list-nav">
+      <ul class="list-nav">
         <li>Pricing</li>
         <li>Product</li>
-        <li>About</li>
+        <li>About Us</li>
         <li>Carrers</li>
         <li>Community</li>
       </ul>
       <div class="start"><button class="btn-primary">Get Started</button></div>
-      <div class="menu"><button class="btn-menu" id="btn-menu"><img src="{{url_for('static', filename='images/icon-hamburger.svg')}}" alt="Menu"></button></div>
+      <div class="menu"><button id="btn-menu" class="btn-menu"><img src="static/images/icon-hamburger.svg" alt="Menu"></button></div>
   </header>
 
   <section class="info">
-    <article class="article-presentation">
+    <article>
       <header class="graphics">
-        <img src="{{url_for('static', filename='images/illustration-intro.svg')}}" alt="Primer gráfico">
+        <img src="static/images/illustration-intro.svg" alt="Primer gráfico">
       </header>
       <div class="description">
         <h1>Bring everyone together to build better products.</h1>
@@ -120,14 +120,14 @@
       <li><a href="#">Privacy Policy</a></li>
     </ul>
     <div class="social-media">
-      <a href="https://facebook.com" target="__blank"><img src="{{url_for('static', filename='images/icon-facebook.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-youtube.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-twitter.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-pinterest.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-instagram.svg')}}" alt=""></a>
+      <a href="https://facebook.com" target="__blank"><img src="static/images/icon-facebook.svg" alt=""></a>
+      <a href="#" target="__blank"><img src="static/images/icon-youtube.svg" alt="Icono de facebook"></a>
+      <a href="#" target="__blank"><img src="static/images/icon-twitter.svg" alt="icono de youtube"></a>
+      <a href="#" target="__blank"><img src="static/images/icon-pinterest.svg" alt="Icono de pinterest"></a>
+      <a href="#" target="__blank"><img src="static/images/icon-instagram.sv" alt="Icono de instagram"></a>
     </div>
     <div class="footer-logo">
-      <img src="{{url_for('static', filename='images/logo-white.svg')}}" alt="">
+      <img src="static/images/logo-white.svg" alt="Logo del sitio">
     </div>
     <div class="copyright">
       <p>Copyright 2020. All Rights Reserved</p>
@@ -136,6 +136,6 @@
 
   <div class="overlay" id="overlay"></div>
 
-<script src="{{url_for('static', filename='js/index.js')}}"></script>
+<script src="static/js/index.js"></script>
 </body>
 </html>
