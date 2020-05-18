@@ -71,10 +71,6 @@ body {
         margin-bottom: 8px;
     }
 
-    .header-site .logo-header img {
-        width: 66%;
-    }
-
     .list-nav {
         background: #fff;
         height: 45%;
@@ -336,14 +332,11 @@ body {
     
 }
 
-@media screen and (min-width: 740px) {
-    
-    .logo-header img {
-        width: 20%;
-    }
-}
-
 @media screen and (min-width: 1024px) {
+
+    body {
+        background-image: url(../images/bg-simplify-section-desktop.svg);
+    }
 
     .header-site {
         grid-template-columns: 1fr 1fr 1fr;
@@ -351,8 +344,8 @@ body {
         align-items: center;
     }
 
-    .logo-header img {
-        width: 70%;
+    section {
+        margin: 45px 70px;
     }
 
     #btn-menu {
@@ -361,7 +354,7 @@ body {
 
     .start {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
     }
 
@@ -374,10 +367,60 @@ body {
         font-size: 12px;
         overflow: visible;
     }
+
+    .article-presentation {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 1440px;
+    }
+
+    .description {
+        text-align: left;
+        margin: auto auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    
+    .description h1 {
+        font-size: 65px;
+        color: #242e51;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .description button {
+        margin: 50px 0;
+    }
+
+    .description p {
+        hyphens: manual;
+    }
+
+    .desktop {
+
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 44% 49%;
+        grid-gap: 19px 1px;
+    }
+
+    .about {
+        text-align: left;
+    }
+
+    .about h1 {
+        font-size: 50px;
+        color: #242e51;
+    }
+
+    .header-card {
+        background-color: transparent;
+    }
+
 }
 
-@media screen and (min-width: 1200px) {
-    .logo-header img {
-        width: 45%;
-    }
-}
+/* @media screen and (min-width: 1200px) {
+} */

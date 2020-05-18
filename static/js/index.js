@@ -37,6 +37,9 @@ async function getData() {
   const response = await data.json();
   return response;
 }
+
+if (matchMedia('(max-width: 1024px)').matches) {
+
 async function validSlider() {
   let data = await getData();
   if ($image.getAttribute('src') == 0) {
@@ -68,7 +71,7 @@ async function validSlider() {
     $btn[3].classList.remove('active')
     $btn[0].classList.add('active');
   }
-  // alert()
 }
 
 setInterval(validSlider, timer)
+}

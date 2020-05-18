@@ -24,7 +24,7 @@
       <ul class="list-nav" id="list-nav">
         <li>Pricing</li>
         <li>Product</li>
-        <li>About Us</li>
+        <li>About</li>
         <li>Carrers</li>
         <li>Community</li>
       </ul>
@@ -33,7 +33,7 @@
   </header>
 
   <section class="info">
-    <article>
+    <article class="article-presentation">
       <header class="graphics">
         <img src="{{url_for('static', filename='images/illustration-intro.svg')}}" alt="Primer gráfico">
       </header>
@@ -43,33 +43,37 @@
         <button class="btn-primary">Get Started</button>
       </div>
     </article>
-    <article class="about">
-      <h1>What's different about Manage?</h1>
-      <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
-    </article>
-    <article class="description-card">
-      <div class="card">
-        <div class="header-card">
-          <span>01</span>
-          <h4>Track company-wide progress</h4>
-        </div>
-        <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture againg.</p>
+    <div class="desktop">
+      <article class="about">
+        <h1>What's different about Manage?</h1>
+        <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
+      </article>
+      <div class="card-container">
+        <article class="description-card">
+          <div class="card">
+            <div class="header-card">
+              <span>01</span>
+              <h4>Track company-wide progress</h4>
+            </div>
+            <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture againg.</p>
+          </div>
+          <div class="card">
+            <div class="header-card">
+              <span>02</span>
+              <h4>Advance buildt-in reports</h4>
+            </div>
+            <p>Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the report you need to keep key stakeholders informed.</p>
+          </div>
+          <div class="card">
+            <div class="header-card">
+              <span>03</span>
+              <h4>Everything you need in one place</h4>
+            </div>
+            <p>Stop jumping from one service to another to communicate, store, files, track tasks and share communicate. Manage offers an all-in-one team productivity solution.</p>
+          </div>
+        </article>
       </div>
-      <div class="card">
-        <div class="header-card">
-          <span>02</span>
-          <h4>Advance buildt-in reports</h4>
-        </div>
-        <p>Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the report you need to keep key stakeholders informed.</p>
-      </div>
-      <div class="card">
-        <div class="header-card">
-          <span>03</span>
-          <h4>Everything you need in one place</h4>
-        </div>
-        <p>Stop jumping from one service to another to communicate, store, files, track tasks and share communicate. Manage offers an all-in-one team productivity solution.</p>
-      </div>
-    </article>
+    </div>
   </section>
 
   <section class="testimonial">
