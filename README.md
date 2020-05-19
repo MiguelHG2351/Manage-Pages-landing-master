@@ -33,13 +33,10 @@ Con este comando inicias un servidor básico de python, pero necesitas tener ins
 }
 `
 
-
-
-#Puedes aprender más aqui
+# Puedes aprender más aqui
 
 [![Leonidas Esteban](http://img.youtube.com/vi/Q1d5UNZ3q1E/0.jpg)](http://www.youtube.com/watch?v=Q1d5UNZ3q1E "Videos Recomendados para programar")
 
-https://www.youtube.com/watch?v=bxtyA5CGTNA
 [![Nuncca te rindas](http://img.youtube.com/vi/bxtyA5CGTNA/0.jpg)](http://www.youtube.com/watch?v=bxtyA5CGTNA "Aprende programación con Leonidas Esteban")
 
-#Recuerda darme una estrella :)
+# Recuerda darme una estrella :)
