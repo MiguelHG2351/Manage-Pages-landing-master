@@ -36,7 +36,7 @@ for (const key in $btn) {
 
 
 async function getData() {
-  const data = await fetch("api.json");
+  const data = await fetch('https://miguelhg2351.github.io/Manage-Pages-landing-master/site/static/js/api.json');
   const response = await data.json();
   this.hola = response;
   return response
@@ -104,7 +104,7 @@ class API {
           slider.append(elementos)
         });
       }
-  }
+    }
     
 }
 
