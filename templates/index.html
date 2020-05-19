@@ -106,34 +106,35 @@
   </section>
 
   <footer class="footer">
-    <form class="register" id="form">
-      <input placeholder="Updates in your inbox" type="email" name="email" />
-      <button type="submit">Go</button>
-    </form>
-    <ul class="list-footer">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About US</a></li>
-      <li><a href="#">Carrers</a></li>
-      <li><a href="#">Community</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-    </ul>
-    <div class="social-media">
-      <a href="https://facebook.com" target="__blank"><img src="{{url_for('static', filename='images/icon-facebook.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-youtube.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-twitter.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-pinterest.svg')}}" alt=""></a>
-      <a href="#" target="__blank"><img src="{{url_for('static', filename='images/icon-instagram.svg')}}" alt=""></a>
-    </div>
-    <div class="footer-logo">
-      <img src="{{url_for('static', filename='images/logo-white.svg')}}" alt="">
-    </div>
-    <div class="copyright">
-      <p>Copyright 2020. All Rights Reserved</p>
+    <div class="container-footer">
+      <form class="register" id="form">
+        <input placeholder="Updates in your inbox" type="email" name="email" />
+        <button type="submit">Go</button>
+      </form>
+      <ul class="list-footer">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About US</a></li>
+        <li><a href="#">Carrers</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="social-media">
+        <a href="https://facebook.com" target="__blank"><img src="{{url_for('static', filename='images/icon-facebook.svg')}}" alt=""></a>
+        <a href="https://youtube.com" target="__blank"><img src="{{url_for('static', filename='images/icon-youtube.svg')}}" alt=""></a>
+        <a href="https://twitter.com" target="__blank"><img src="{{url_for('static', filename='images/icon-twitter.svg')}}" alt=""></a>
+        <a href="https://pinterest.com" target="__blank"><img src="{{url_for('static', filename='images/icon-pinterest.svg')}}" alt=""></a>
+        <a href="https://instagram.com" target="__blank"><img src="{{url_for('static', filename='images/icon-instagram.svg')}}" alt=""></a>
+      </div>
+      <div class="footer-logo">
+        <img src="{{url_for('static', filename='images/logo-white.svg')}}" alt="">
+      </div>
+      <div class="copyright">
+        <p>Copyright 2020. All Rights Reserved</p>
+      </div>
     </div>
   </footer>
-
   <div class="overlay" id="overlay"></div>
 
 <script src="{{url_for('static', filename='js/index.js')}}"></script>

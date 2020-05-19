@@ -8,8 +8,10 @@ const $overlay = document.querySelector('.overlay')
 const $image = document.getElementById("slider-image");
 const $user = document.getElementById("slider-user");
 const $description = document.getElementById("slider-description");
+const $form = document.getElementById('form');
 let timer = 4000
 
+$form.addEventListener('submit', e => e.preventDefault())
 
 menu.addEventListener('click', () => {
   sidenav.classList.toggle('d-flex')
@@ -32,46 +34,85 @@ for (const key in $btn) {
     }
 }
 
+
 async function getData() {
-  const data = await fetch("static/js/api.json");
+  const data = await fetch("api.json");
   const response = await data.json();
-  return response;
+  this.hola = response;
+  return response
 }
 
-if (matchMedia('(max-width: 1024px)').matches) {
-
-async function validSlider() {
-  let data = await getData();
-  if ($image.getAttribute('src') == 0) {
-    $image.setAttribute("src", `${data[0].image}`);
-    $user.textContent = data[0].user
-    $description.textContent = data[0].description
-  } else if($image.getAttribute('src') === data[0].image) {
-    $user.textContent = data[1].user
-    $description.textContent = data[1].description
-    $image.setAttribute('src', `${data[1].image}`)
-    $btn[0].classList.remove('active')
-    $btn[1].classList.add('active');
-  } else if($image.getAttribute('src') === data[1].image) {
-    $user.textContent = data[2].user
-    $description.textContent = data[2].description
-    $image.setAttribute('src', `${data[2].image}`)
-    $btn[1].classList.remove('active')
-    $btn[2].classList.add('active');
-  } else if($image.getAttribute('src') === data[2].image) {
-    $user.textContent = data[3].user
-    $description.textContent = data[3].description
-    $image.setAttribute('src', `${data[3].image}`)
-    $btn[2].classList.remove('active')
-    $btn[3].classList.add('active');
-  } else if($image.getAttribute('src') === data[3].image) {
-    $user.textContent = data[0].user
-    $description.textContent = data[0].description
-    $image.setAttribute('src', `${data[0].image}`)
-    $btn[3].classList.remove('active')
-    $btn[0].classList.add('active');
+class API {
+ 
+  renderTemplate(url, description, user) {
+    return `
+    <div>
+      <div class="card-image">
+            <figure>
+              <img src="${url}" id="slider-image" alt="Testimonio de los que utilizarón el servicio" />
+              <p id="slider-user">${user}</p>
+            </figure>
+          </div>
+          <div class="card-description">
+              <p id="slider-description">${description}</p>
+          </div>
+    </div>
+        `
   }
+
+  async validSlider() {
+      let data =  await getData();
+      if(matchMedia('(max-width:1024px)').matches) {
+        if ($image.getAttribute('src') == 0) {
+          $image.setAttribute("src", `${data[0].image}`);
+          $user.textContent = data[0].user
+          $description.textContent = data[0].description
+        } else if($image.getAttribute('src') === data[0].image) {
+          $user.textContent = data[1].user
+          $description.textContent = data[1].description
+          $image.setAttribute('src', `${data[1].image}`)
+          $btn[0].classList.remove('active')
+          $btn[1].classList.add('active');
+        } else if($image.getAttribute('src') === data[1].image) {
+          $user.textContent = data[2].user
+          $description.textContent = data[2].description
+          $image.setAttribute('src', `${data[2].image}`)
+          $btn[1].classList.remove('active')
+          $btn[2].classList.add('active');
+        } else if($image.getAttribute('src') === data[2].image) {
+          $user.textContent = data[3].user
+          $description.textContent = data[3].description
+          $image.setAttribute('src', `${data[3].image}`)
+          $btn[2].classList.remove('active')
+          $btn[3].classList.add('active');
+        } else if($image.getAttribute('src') === data[3].image) {
+          $user.textContent = data[0].user
+          $description.textContent = data[0].description
+          $image.setAttribute('src', `${data[0].image}`)
+          $btn[3].classList.remove('active')
+          $btn[0].classList.add('active');
+        }
+      } else {
+        slider.innerHTML = ""
+        const html = document.implementation.createHTMLDocument()
+        data.forEach(element => {
+          let {user, image, description} = element
+          debugger
+          const html_string = this.renderTemplate(image, description, user)
+          html.body.innerHTML = html_string
+          const elementos = html.body.children[0]
+          slider.append(elementos)
+        });
+      }
+  }
+    
 }
 
-setInterval(validSlider, timer)
-}
+  const app = new API()
+  console.log(app)
+  if(matchMedia('(max-width: 1024px)').matches) {
+    setInterval(app.validSlider, timer)
+  } else {
+    app.validSlider()
+  }
+
