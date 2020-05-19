@@ -11,46 +11,12 @@ DEMO --> https://miguelhg2351.github.io/Manage-Pages-landing-master/site/
 Con este comando inicias un servidor básico de python, pero necesitas tener instalado Flask y si tienes python instalado solo ejecuta pip install Flask y listo sino crea tu servidor de archivos estaticos y accedes a la [Carpeta Site](site/)
 
 `
-{
-
-  "name": "manage-landing-page-master",
-
-  "version": "1.0.0",
-
-  "description": "![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)",
-
-  "main": "index.js",
-  
-  "scripts": {
-  
-    "test": "echo \"Error: no test specified\" && exit 1",
-  
     "start": "node server.js",
-  
     "dev": "python server.py"
-  
-  },
-  
-  "keywords": [],
-  
-  "author": "",
-  
-  "license": "ISC",
-  
-  "dependencies": {
-  
-    "express": "^4.17.1"
-  
-  },
-  
-  "devDependencies": {
-  
-    "nodemon": "^2.0.3"
-  
-  }
 
-}
 `
+
+En este caso use un servidor de con python para practicar aunque en mi opinion NodeJS es el mejor en BackEnd por el momento ya que DENO acaba de salir (Salio en el 2018) y habria que esperar para ver como le va aunque igual no estaria nada mal ir a probarlo ahora 
 
 # Puedes aprender más aqui
 
