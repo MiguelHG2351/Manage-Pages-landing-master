@@ -11,6 +11,12 @@ const $description = document.getElementById("slider-description");
 const $form = document.getElementById('form');
 let timer = 4000
 
+document.addEventListener('keydown', (event) => {
+  if (event.key == 'F12') {
+    alert('Muy sospechoso xD')
+  }
+});
+
 $form.addEventListener('submit', e => e.preventDefault())
 
 menu.addEventListener('click', () => {
