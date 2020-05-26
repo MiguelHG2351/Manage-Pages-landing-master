@@ -120,5 +120,5 @@ class API {
     setInterval(app.validSlider, timer)
   } else {
     app.validSlider()
+    document.addEventListener('resize', app.validSlider)
   }
-
